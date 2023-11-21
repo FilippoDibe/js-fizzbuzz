@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #083b4c;
+}
+h1{
+    text-align: center;
+    padding-top: 30px;
+    color:white;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.container{
+    width: 70%;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.square{
+    width: calc((100% / 7) - 10px);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1389b2;
+    font-size: 30px;
+
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap:30px;
+}
+button{
+    padding: 10px 20px;
+}
+#multipli-tre:hover{
+    background-color: #0cd6a0;
+}
+#multipli-cinque:hover{
+    background-color: #ffd166;
+}
+#multipli:hover{
+    background-color: red;
+}
