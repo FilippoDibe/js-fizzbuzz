@@ -5,25 +5,25 @@
 
 const container = document.querySelector(".container");
 
-// Funzione per generare la stringa HTML di un quadrato
-function createSquare(i) {
-    return `<div class="square">${i}</div>`;
-}
+
 
 // Aggiunge i quadrati al container
 for (let i = 1; i <= 100; i++) {
-    container.innerHTML += createSquare(i);
+    const square = document.createElement("div");
+    square.classList.add("square");
+    square.textContent = i;
+    container.appendChild(square);
 }
     // funziona per gestire il click sul bottonr multipli 
     function Multipli (){
         // Seleziona tutti gli elementi con la classe "square"
         const squares =document.querySelectorAll(".square");
             // cerca su ogni quadrato
-            squares.forEach((square, index) =>  {
+            squares.forEach((square, i) =>  {
                 // condizione di ricerca  
-                if(((index +1) % 5 ===0) & (index +1) % 3 === 0){
+                if(((i +1) % 5 ===0) && (i +1) % 3 === 0){
                     // sovrascrivi con buzz 
-                    square.innerHTML = "FizzBuzz"
+                    square.append= "FizzBuzz"
                     square.style.backgroundColor = "red"; 
                 }
             });
@@ -42,11 +42,11 @@ for (let i = 1; i <= 100; i++) {
         const squares = document.querySelectorAll(".square");
 
         // cerca su ogni quadrato
-        squares.forEach((square, index) => {
+        squares.forEach((square, i) => {
             // condizione di ricerca 
-            if ((index + 1) % 3 === 0) {
+            if ((i + 1) % 3 === 0) {
                 // Sovrascrive il contenuto con "Fizz"
-                square.innerHTML = "Fizz";
+                square.append = "Fizz";
                 square.style.backgroundColor = "#0cd6a1"; 
 
             }
@@ -62,11 +62,11 @@ for (let i = 1; i <= 100; i++) {
         // Seleziona tutti gli elementi con la classe "square"
         const squares =document.querySelectorAll(".square");
             // cerca su ogni quadrato
-            squares.forEach((square, index) =>  {
+            squares.forEach((square, i) =>  {
                 // condizione di ricerca  
-                if((index +1) % 5 ===0){
+                if((i +1) % 5 ===0){
                     // sovrascrivi con buzz 
-                    square.innerHTML = "Buzz"
+                    square.append = "Buzz"
                     square.style.backgroundColor = "#ffd166"; 
                 }
             });
@@ -77,6 +77,5 @@ for (let i = 1; i <= 100; i++) {
      });
 
 
-       // Funzione per gestire il click sul bottone "multipli"
 
 
